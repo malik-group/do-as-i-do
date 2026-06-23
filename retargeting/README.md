@@ -79,6 +79,30 @@ Written under `outputs/` (relative to the `retargeting/` directory):
 - `outputs/{robot}/{hand}/{task}/0/trajectory_mjwp.npz` + `config.yaml` — optimized trajectory
   (with per-step tracking-error metrics stored in the `.npz`) and the resolved run config (stage 5)
 
+## Visualize a retargeted trajectory
+
+`replay_viser.py` plays back a finished run (`scene.xml` + `trajectory_mjwp.npz`) in an
+interactive [viser](https://github.com/nerfstudio-project/viser) viewer **without re-running
+the optimization** — it reuses the pipeline's own `retargeting.utils.viser_viewer`. From the
+`retargeting/` directory in the `retargeting` env:
+
+```bash
+conda activate retargeting
+python replay_viser.py                       # whisking demo → http://localhost:8081
+```
+
+Open the printed URL and use the **Frame** slider / **Play** button. Useful flags:
+
+- `--run-dir DIR` — run directory to replay (default `outputs/sharpa/right/whisking/0`)
+- `--no-skip-warmup` — include the leading warmup/settling frames (skipped by default)
+- `--port N` — viser port (default `8081`)
+- `--scene scene.xml --traj trajectory_mjwp.npz` — point at explicit files
+
+The shipped `whisking` demo runs this out of the box (no pipeline run needed). It uses the run's
+`scene.xml`, `trajectory_mjwp.npz`, and `config.yaml`, plus the meshes `scene.xml` references
+under `outputs/assets/` (`objects/whisking/visual.obj` + `convex/`, and the referenced
+`robots/sharpa/meshes/*.STL`).
+
 ## Credits & licenses
 
 This codebase is built on [SPIDER](https://github.com/facebookresearch/spider). Physics optimization uses

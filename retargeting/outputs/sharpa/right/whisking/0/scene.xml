@@ -1,0 +1,981 @@
+<mujoco model="sharpa_right">
+  <compiler angle="radian" meshdir="../../../../assets/"/>
+
+  <default>
+    <joint armature="1"/>
+    <geom contype="0" conaffinity="0" condim="1" density="800"/>
+    <site group="3" rgba="1 0 0 1"/>
+    <general biastype="affine" gainprm="300" biasprm="0 -300 1"/>
+  </default>
+
+  <asset>
+    <texture type="skybox" colorspace="auto" builtin="gradient" rgb1="1 1 1" rgb2="1 1 1" width="512" height="3072"/>
+    <texture type="2d" colorspace="auto" name="right_groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <texture type="cube" colorspace="auto" name="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <material name="right_groundplane" texture="right_groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    <mesh name="right_hand_C_MC_visual" file="robots/sharpa/meshes/right_hand_C_MC_visual_.STL"/>
+    <mesh name="right_hand_C_MC" file="robots/sharpa/meshes/right_hand_C_MC.STL"/>
+    <mesh name="right_thumb_CMC_VL_visual" file="robots/sharpa/meshes/right_thumb_CMC_VL_visual.STL"/>
+    <mesh name="right_thumb_MC_visual" file="robots/sharpa/meshes/right_thumb_MC_visual.STL"/>
+    <mesh name="right_thumb_MC" file="robots/sharpa/meshes/right_thumb_MC.STL"/>
+    <mesh name="right_thumb_MCP_VL_visual" file="robots/sharpa/meshes/right_thumb_MCP_VL_visual.STL"/>
+    <mesh name="right_thumb_PP_visual" file="robots/sharpa/meshes/right_thumb_PP_visual.STL"/>
+    <mesh name="right_thumb_PP" file="robots/sharpa/meshes/right_thumb_PP.STL"/>
+    <mesh name="right_thumb_DP_visual" file="robots/sharpa/meshes/right_thumb_DP_visual.STL"/>
+    <mesh name="right_thumb_DP" file="robots/sharpa/meshes/right_thumb_DP_visual.STL"/>
+    <mesh name="right_thumb_elastomer" file="robots/sharpa/meshes/thumb_elastomer.STL"/>
+    <mesh name="right_MCP_VL_visual" file="robots/sharpa/meshes/right_MCP_VL_visual.STL"/>
+    <mesh name="right_MCP_VL" file="robots/sharpa/meshes/right_MCP_VL.STL"/>
+    <mesh name="right_PP_visual" file="robots/sharpa/meshes/right_PP_visual.STL"/>
+    <mesh name="right_PP" file="robots/sharpa/meshes/right_PP.STL"/>
+    <mesh name="right_MP_visual" file="robots/sharpa/meshes/right_MP_visual.STL"/>
+    <mesh name="right_MP" file="robots/sharpa/meshes/right_MP.STL"/>
+    <mesh name="right_DP_visual" file="robots/sharpa/meshes/right_DP_visual.STL"/>
+    <mesh name="right_DP" file="robots/sharpa/meshes/right_DP_visual.STL"/>
+    <mesh name="right_elastomer" file="robots/sharpa/meshes/elastomer.STL"/>
+    <mesh name="right_pinky_MC_visual" file="robots/sharpa/meshes/right_pinky_MC_visual.STL"/>
+    <mesh name="right_pinky_MC" file="robots/sharpa/meshes/right_pinky_MC.STL"/>
+    <mesh name="right_visual" file="objects/whisking/visual.obj"/>
+    <mesh name="right_0" content_type="model/obj" file="objects/whisking/convex/0.obj"/>
+    <mesh name="right_1" content_type="model/obj" file="objects/whisking/convex/1.obj"/>
+    <mesh name="right_10" content_type="model/obj" file="objects/whisking/convex/10.obj"/>
+    <mesh name="right_11" content_type="model/obj" file="objects/whisking/convex/11.obj"/>
+    <mesh name="right_12" content_type="model/obj" file="objects/whisking/convex/12.obj"/>
+    <mesh name="right_13" content_type="model/obj" file="objects/whisking/convex/13.obj"/>
+    <mesh name="right_14" content_type="model/obj" file="objects/whisking/convex/14.obj"/>
+    <mesh name="right_15" content_type="model/obj" file="objects/whisking/convex/15.obj"/>
+    <mesh name="right_16" content_type="model/obj" file="objects/whisking/convex/16.obj"/>
+    <mesh name="right_17" content_type="model/obj" file="objects/whisking/convex/17.obj"/>
+    <mesh name="right_18" content_type="model/obj" file="objects/whisking/convex/18.obj"/>
+    <mesh name="right_19" content_type="model/obj" file="objects/whisking/convex/19.obj"/>
+    <mesh name="right_2" content_type="model/obj" file="objects/whisking/convex/2.obj"/>
+    <mesh name="right_20" content_type="model/obj" file="objects/whisking/convex/20.obj"/>
+    <mesh name="right_21" content_type="model/obj" file="objects/whisking/convex/21.obj"/>
+    <mesh name="right_22" content_type="model/obj" file="objects/whisking/convex/22.obj"/>
+    <mesh name="right_23" content_type="model/obj" file="objects/whisking/convex/23.obj"/>
+    <mesh name="right_24" content_type="model/obj" file="objects/whisking/convex/24.obj"/>
+    <mesh name="right_25" content_type="model/obj" file="objects/whisking/convex/25.obj"/>
+    <mesh name="right_26" content_type="model/obj" file="objects/whisking/convex/26.obj"/>
+    <mesh name="right_27" content_type="model/obj" file="objects/whisking/convex/27.obj"/>
+    <mesh name="right_28" content_type="model/obj" file="objects/whisking/convex/28.obj"/>
+    <mesh name="right_29" content_type="model/obj" file="objects/whisking/convex/29.obj"/>
+    <mesh name="right_3" content_type="model/obj" file="objects/whisking/convex/3.obj"/>
+    <mesh name="right_30" content_type="model/obj" file="objects/whisking/convex/30.obj"/>
+    <mesh name="right_31" content_type="model/obj" file="objects/whisking/convex/31.obj"/>
+    <mesh name="right_4" content_type="model/obj" file="objects/whisking/convex/4.obj"/>
+    <mesh name="right_5" content_type="model/obj" file="objects/whisking/convex/5.obj"/>
+    <mesh name="right_6" content_type="model/obj" file="objects/whisking/convex/6.obj"/>
+    <mesh name="right_7" content_type="model/obj" file="objects/whisking/convex/7.obj"/>
+    <mesh name="right_8" content_type="model/obj" file="objects/whisking/convex/8.obj"/>
+    <mesh name="right_9" content_type="model/obj" file="objects/whisking/convex/9.obj"/>
+  </asset>
+
+  <worldbody>
+    <camera name="front" pos="0.031 0.941 0.844" quat="0.0150738 0.00673439 0.407848 0.912901" mode="trackcom"/>
+    <body name="right_base_tx">
+      <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+      <joint name="right_pos_x" pos="0 0 0" axis="1 0 0" type="slide" range="-5 5"/>
+      <camera name="right_track" pos="0.868 -0.348 -0.175" quat="0.506363 0.51196 0.493349 0.487956"/>
+      <body name="right_base_ty">
+        <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+        <joint name="right_pos_y" pos="0 0 0" axis="0 1 0" type="slide" range="-5 5"/>
+        <body name="right_base_tz">
+          <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+          <joint name="right_pos_z" pos="0 0 0" axis="0 0 1" type="slide" range="-5 5"/>
+          <body name="right_base_roll">
+            <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+            <joint name="right_rot_x" pos="0 0 0" axis="1 0 0" range="-6.28 6.28"/>
+            <body name="right_base_pitch">
+              <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+              <joint name="right_rot_y" pos="0 0 0" axis="0 1 0" range="-6.28 6.28"/>
+              <body name="right_base_yaw">
+                <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
+                <joint name="right_rot_z" pos="0 0 0" axis="0 0 1" range="-6.28 6.28"/>
+                <body name="right_hand_C_MC">
+                  <inertial pos="0.0060282 0.00091891 0.038914" mass="0.72045" diaginertia="0.00071328 0.00081371 0.00020795"/>
+                  <geom name="right_hand_C_MC_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_hand_C_MC_visual"/>
+                  <geom name="collision_hand_right_palm_0" size="0.016 0.035 0.035" pos="0 0 0.05" type="box" group="3" rgba="0 1 0 1"/>
+                  <geom name="collision_hand_right_arm_cyl" size="0.032 0.046" pos="0 0 -0.046" quat="0 1 0 0" type="cylinder" group="3" density="0" rgba="0.5 0.5 0.5 0.8"/>
+                  <site name="right_palm" pos="0 0 0.05" size="0.01 0.02 0.03" type="box"/>
+                  <body name="right_thumb_CMC_VL" pos="0.01 0.026 0.0212" quat="-2.59734e-06 0.707105 0.707108 -2.59735e-06">
+                    <inertial pos="0 0 0" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                    <joint name="right_thumb_CMC_FE" pos="0 0 0" axis="0 0 1" range="-0.1745 1.9199"/>
+                    <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_CMC_VL_visual"/>
+                    <site name="right_thumb_mcp" pos="0 0 0"/>
+                    <body name="right_thumb_MC" pos="0 -0.005 0" quat="0.65328 -0.653282 0.270598 0.270599">
+                      <inertial pos="0.0378875 -0.0105001 0.00999649" quat="-0.224946 0.690249 -0.156115 0.669764" mass="0.116" diaginertia="3.87084e-05 3.37238e-05 1.64399e-05"/>
+                      <joint name="right_thumb_CMC_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                      <geom name="right_thumb_MC_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_MC_visual"/>
+                      <geom name="collision_hand_right_thumb_2" size="0.015 0.0330189" pos="0.0325 -0.003 0.005" quat="0.758758 0.0598721 0.648615 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                      <body name="right_thumb_MCP_VL" pos="0.065 -0.006 0.010392" quat="0.965926 0.25882 0 0">
+                        <inertial pos="4.8e-09 0.000869809 -3.6e-09" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                        <joint name="right_thumb_MCP_FE" pos="0 0 0" axis="0 0 1" range="-0.5236 1.3963"/>
+                        <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_MCP_VL_visual"/>
+                        <site name="right_thumb_pip" pos="0 0 0"/>
+                        <body name="right_thumb_PP" quat="0.707105 -0.707108 0 0">
+                          <inertial pos="0.0219649 -0.000155785 -0.00149071" quat="0.47361 0.526063 0.5236 0.474125" mass="0.04955" diaginertia="4.63211e-06 4.39424e-06 2.59479e-06"/>
+                          <joint name="right_thumb_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                          <geom name="right_thumb_PP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_PP_visual"/>
+                          <geom name="collision_hand_right_thumb_1" size="0.012 0.0195" pos="0.0195 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                          <body name="right_thumb_DP" pos="0.039 0 0" quat="0.707105 0.707108 0 0">
+                            <inertial pos="0.009858 -0.0101251 0.00044685" quat="0.650084 0.202839 -0.647252 0.342507" mass="0.005987" diaginertia="8.79951e-07 8.08527e-07 2.50483e-07"/>
+                            <joint name="right_thumb_IP" pos="0 0 0" axis="0 0 1" range="0 1.7453"/>
+                            <geom name="right_thumb_DP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_DP_visual"/>
+                            <geom name="right_thumb_elastomer_visual" quat="0.499998 0.5 -0.5 0.500002" type="mesh" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_thumb_elastomer"/>
+                            <geom name="collision_hand_right_thumb_0" size="0.007 0.0112805" pos="0.011 -0.0005 0" quat="0.707107 0.15671 0.689523 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                            <site name="right_thumb_dip" pos="0 0 0"/>
+                            <site name="right_thumb_tip" pos="0.015 0 0"/>
+                            <site name="track_hand_right_thumb_tip" pos="0.015 0 0"/>
+                            <site name="trace_hand_right_thumb_tip" pos="0.015 0 0"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="right_index_MCP_VL" pos="0.001 0.0303 0.0957" quat="0.499998 -0.500002 -0.5 -0.5">
+                    <inertial pos="4.8e-09 0.00086981 -3.6e-09" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                    <joint name="right_index_MCP_FE" pos="0 0 0" axis="0 0 1" range="-0.174533 1.5708"/>
+                    <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MCP_VL_visual"/>
+                    <site name="right_index_mcp" pos="0 0 0"/>
+                    <body name="right_index_PP" quat="0.707105 -0.707108 0 0">
+                      <inertial pos="0.0243772 1.00263e-06 -0.000755901" quat="0.479204 0.519977 0.519877 0.479286" mass="0.04138" diaginertia="6.82371e-06 6.54097e-06 2.16753e-06"/>
+                      <joint name="right_index_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                      <geom name="right_index_PP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual"/>
+                      <geom name="collision_hand_right_index_2" size="0.01 0.0235" pos="0.0235 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                      <body name="right_index_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
+                        <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
+                        <joint name="right_index_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453"/>
+                        <geom name="right_index_MP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MP_visual"/>
+                        <geom name="collision_hand_right_index_1" size="0.009 0.01575" pos="0.01575 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                        <site name="right_index_pip" pos="0 0 0"/>
+                        <body name="right_index_DP" pos="0.0315 0 0">
+                          <inertial pos="0.00931268 -0.00769378 0.000111581" quat="0.64397 0.245697 -0.649334 0.321406" mass="0.004103" diaginertia="4.23752e-07 3.85411e-07 1.37217e-07"/>
+                          <joint name="right_index_DIP" pos="0 0 0" axis="0 0 1" range="0 1.3963"/>
+                          <geom name="right_index_DP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP_visual"/>
+                          <geom name="right_index_elastomer_visual" quat="0.499998 0.5 -0.5 0.500002" type="mesh" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer"/>
+                          <geom name="collision_hand_right_index_0" size="0.007 0.0100499" pos="0.01 -0.001 0" quat="0.707107 0.0703598 0.703598 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                          <site name="right_index_dip" pos="0 0 0"/>
+                          <site name="right_index_tip" pos="0.014 0 0"/>
+                          <site name="track_hand_right_index_tip" pos="0.014 0 0"/>
+                          <site name="trace_hand_right_index_tip" pos="0.014 0 0"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="right_middle_MCP_VL" pos="0 0.01 0.0987" quat="0.499998 -0.500002 -0.5 -0.5">
+                    <inertial pos="0 0 0" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                    <joint name="right_middle_MCP_FE" pos="0 0 0" axis="0 0 1" range="-0.174533 1.5708"/>
+                    <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MCP_VL_visual"/>
+                    <site name="right_middle_mcp" pos="0 0 0"/>
+                    <body name="right_middle_PP" quat="0.707105 -0.707108 0 0">
+                      <inertial pos="0.0243772 1.00263e-06 -0.000755901" quat="0.479204 0.519977 0.519877 0.479286" mass="0.04138" diaginertia="6.82371e-06 6.54097e-06 2.16753e-06"/>
+                      <joint name="right_middle_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                      <geom name="right_middle_PP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual"/>
+                      <geom name="collision_hand_right_middle_2" size="0.01 0.0235" pos="0.0235 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                      <body name="right_middle_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
+                        <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
+                        <joint name="right_middle_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453"/>
+                        <geom name="right_middle_MP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MP_visual"/>
+                        <geom name="collision_hand_right_middle_1" size="0.009 0.01575" pos="0.01575 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                        <site name="right_middle_pip" pos="0 0 0"/>
+                        <body name="right_middle_DP" pos="0.0315 0 0">
+                          <inertial pos="0.00931268 -0.00769378 0.000111581" quat="0.64397 0.245697 -0.649334 0.321406" mass="0.004103" diaginertia="4.23752e-07 3.85411e-07 1.37217e-07"/>
+                          <joint name="right_middle_DIP" pos="0 0 0" axis="0 0 1" range="0 1.3963"/>
+                          <geom name="right_middle_DP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP_visual"/>
+                          <geom name="right_middle_elastomer_visual" quat="0.5 0.5 -0.5 0.5" type="mesh" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer"/>
+                          <geom name="collision_hand_right_middle_0" size="0.007 0.0100499" pos="0.01 -0.001 0" quat="0.707107 0.0703598 0.703598 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                          <site name="right_middle_dip" pos="0 0 0"/>
+                          <site name="right_middle_tip" pos="0.014 0 0"/>
+                          <site name="track_hand_right_middle_tip" pos="0.014 0 0"/>
+                          <site name="trace_hand_right_middle_tip" pos="0.014 0 0"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="right_ring_MCP_VL" pos="0.0015 -0.0103 0.0927" quat="0.499998 -0.500002 -0.5 -0.5">
+                    <inertial pos="4.8e-09 0.00086981 -3.6e-09" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                    <joint name="right_ring_MCP_FE" pos="0 0 0" axis="0 0 1" range="-0.174533 1.5708"/>
+                    <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MCP_VL_visual"/>
+                    <site name="right_ring_mcp" pos="0 0 0"/>
+                    <body name="right_ring_PP" quat="0.707105 -0.707108 0 0">
+                      <inertial pos="0.0243772 1.00263e-06 -0.000755901" quat="0.479204 0.519977 0.519877 0.479286" mass="0.04138" diaginertia="6.82371e-06 6.54097e-06 2.16753e-06"/>
+                      <joint name="right_ring_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                      <geom name="right_ring_PP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual"/>
+                      <geom name="collision_hand_right_ring_2" size="0.01 0.0235" pos="0.0235 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                      <body name="right_ring_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
+                        <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
+                        <joint name="right_ring_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453"/>
+                        <geom name="right_ring_MP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MP_visual"/>
+                        <geom name="collision_hand_right_ring_1" size="0.009 0.01575" pos="0.01575 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                        <site name="right_ring_pip" pos="0 0 0"/>
+                        <body name="right_ring_DP" pos="0.0315 0 0">
+                          <inertial pos="0.00931268 -0.00769378 0.000111581" quat="0.64397 0.245697 -0.649334 0.321406" mass="0.004103" diaginertia="4.23752e-07 3.85411e-07 1.37217e-07"/>
+                          <joint name="right_ring_DIP" pos="0 0 0" axis="0 0 1" range="0 1.3963"/>
+                          <geom name="right_ring_DP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP_visual"/>
+                          <geom name="right_ring_elastomer_visual" quat="0.499998 0.5 -0.5 0.500002" type="mesh" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer"/>
+                          <geom name="collision_hand_right_ring_0" size="0.007 0.0100499" pos="0.01 -0.001 0" quat="0.707107 0.0703598 0.703598 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                          <site name="right_ring_dip" pos="0 0 0"/>
+                          <site name="right_ring_tip" pos="0.014 0 0"/>
+                          <site name="track_hand_right_ring_tip" pos="0.014 0 0"/>
+                          <site name="trace_hand_right_ring_tip" pos="0.014 0 0"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="right_pinky_MC" pos="0.01136 -0.0263 0.0867" quat="-3.67321e-06 0 0 1">
+                    <inertial pos="0.0107985 0.00598801 -0.0335125" quat="0.709657 -0.106152 -0.0812795 0.691746" mass="0.12541" diaginertia="3.57685e-05 2.46485e-05 2.14424e-05"/>
+                    <joint name="right_pinky_CMC" pos="0 0 0" axis="0 0 1" range="0 0.2618"/>
+                    <geom name="right_pinky_MC_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_pinky_MC_visual"/>
+                    <body name="right_pinky_MCP_VL" pos="0.00836 0.0048 0" quat="0.499998 0.5 -0.5 0.500002">
+                      <inertial pos="4.8e-09 0.00086981 -3.6e-09" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
+                      <joint name="right_pinky_MCP_FE" pos="0 0 0" axis="0 0 1" range="-0.174533 1.5708"/>
+                      <geom type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MCP_VL_visual"/>
+                      <site name="right_pinky_mcp" pos="0 0 0"/>
+                      <body name="right_pinky_PP" quat="0.707105 -0.707108 0 0">
+                        <inertial pos="0.0243772 1.00263e-06 -0.000755901" quat="0.479204 0.519977 0.519877 0.479286" mass="0.04138" diaginertia="6.82371e-06 6.54097e-06 2.16753e-06"/>
+                        <joint name="right_pinky_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491"/>
+                        <geom name="right_pinky_PP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual"/>
+                        <geom name="collision_hand_right_pinky_2" size="0.009 0.0235" pos="0.0235 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                        <body name="right_pinky_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
+                          <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
+                          <joint name="right_pinky_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453"/>
+                          <geom name="right_pinky_MP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_MP_visual"/>
+                          <geom name="collision_hand_right_pinky_1" size="0.008 0.01575" pos="0.01575 0 0" quat="0.707107 0 0.707107 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                          <site name="right_pinky_pip" pos="0 0 0"/>
+                          <body name="right_pinky_DP" pos="0.0315 0 0">
+                            <inertial pos="0.00931268 -0.00769376 0.000111581" quat="0.64397 0.245701 -0.649333 0.321403" mass="0.004103" diaginertia="4.23753e-07 3.85412e-07 1.37217e-07"/>
+                            <joint name="right_pinky_DIP" pos="0 0 0" axis="0 0 1" range="0 1.3963"/>
+                            <geom name="right_pinky_DP_visual" type="mesh" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP_visual"/>
+                            <geom name="right_pinky_elastomer_visual" quat="0.499998 0.5 -0.5 0.500002" type="mesh" group="1" density="0" rgba="0.1 1 0.2 1" mesh="right_elastomer"/>
+                            <geom name="collision_hand_right_pinky_0" size="0.007 0.0100499" pos="0.01 -0.001 0" quat="0.707107 0.0703598 0.703598 0" type="capsule" group="3" rgba="0 1 0 1"/>
+                            <site name="right_pinky_dip" pos="0 0 0"/>
+                            <site name="right_pinky_tip" pos="0.014 0 0"/>
+                            <site name="track_hand_right_pinky_tip" pos="0.014 0 0"/>
+                            <site name="trace_hand_right_pinky_tip" pos="0.014 0 0"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="right_object">
+      <joint name="right_object_joint" type="free" armature="0.0001" damping="0.01" frictionloss="0.0001"/>
+      <geom name="right_object_0" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_0"/>
+      <geom name="right_object_1" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_1"/>
+      <geom name="right_object_10" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_10"/>
+      <geom name="right_object_11" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_11"/>
+      <geom name="right_object_12" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_12"/>
+      <geom name="right_object_13" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_13"/>
+      <geom name="right_object_14" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_14"/>
+      <geom name="right_object_15" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_15"/>
+      <geom name="right_object_16" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_16"/>
+      <geom name="right_object_17" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_17"/>
+      <geom name="right_object_18" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_18"/>
+      <geom name="right_object_19" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_19"/>
+      <geom name="right_object_2" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_2"/>
+      <geom name="right_object_20" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_20"/>
+      <geom name="right_object_21" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_21"/>
+      <geom name="right_object_22" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_22"/>
+      <geom name="right_object_23" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_23"/>
+      <geom name="right_object_24" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_24"/>
+      <geom name="right_object_25" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_25"/>
+      <geom name="right_object_26" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_26"/>
+      <geom name="right_object_27" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_27"/>
+      <geom name="right_object_28" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_28"/>
+      <geom name="right_object_29" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_29"/>
+      <geom name="right_object_3" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_3"/>
+      <geom name="right_object_30" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_30"/>
+      <geom name="right_object_31" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_31"/>
+      <geom name="right_object_4" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_4"/>
+      <geom name="right_object_5" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_5"/>
+      <geom name="right_object_6" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_6"/>
+      <geom name="right_object_7" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_7"/>
+      <geom name="right_object_8" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_8"/>
+      <geom name="right_object_9" type="mesh" group="3" density="1000" rgba="0 1 0 1" mesh="right_9"/>
+      <geom name="right_object_visual" type="mesh" density="0" rgba="1 1 1 1" mesh="right_visual"/>
+      <site name="right_object" pos="0 0 0" size="0.01 0.02 0.03" type="box"/>
+      <site name="trace_right_object" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+      <site name="track_object_right_thumb_tip" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+      <site name="track_object_right_index_tip" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+      <site name="track_object_right_middle_tip" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+      <site name="track_object_right_ring_tip" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+      <site name="track_object_right_pinky_tip" pos="0 0 0" size="0.01" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_object_right_thumb_tip" mocap="true">
+      <site name="ref_object_right_thumb_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_hand_right_thumb_tip" mocap="true">
+      <site name="ref_hand_right_thumb_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_object_right_index_tip" mocap="true">
+      <site name="ref_object_right_index_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_hand_right_index_tip" mocap="true">
+      <site name="ref_hand_right_index_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_object_right_middle_tip" mocap="true">
+      <site name="ref_object_right_middle_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_hand_right_middle_tip" mocap="true">
+      <site name="ref_hand_right_middle_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_object_right_ring_tip" mocap="true">
+      <site name="ref_object_right_ring_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_hand_right_ring_tip" mocap="true">
+      <site name="ref_hand_right_ring_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_object_right_pinky_tip" mocap="true">
+      <site name="ref_object_right_pinky_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+    <body name="ref_hand_right_pinky_tip" mocap="true">
+      <site name="ref_hand_right_pinky_tip" pos="0 0 0" size="0.02" group="4" rgba="0 1 0 1"/>
+    </body>
+  </worldbody>
+
+  <contact>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_0" name="collision_hand_right_palm_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_1" name="collision_hand_right_palm_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_10" name="collision_hand_right_palm_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_11" name="collision_hand_right_palm_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_12" name="collision_hand_right_palm_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_13" name="collision_hand_right_palm_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_14" name="collision_hand_right_palm_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_15" name="collision_hand_right_palm_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_16" name="collision_hand_right_palm_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_17" name="collision_hand_right_palm_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_18" name="collision_hand_right_palm_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_19" name="collision_hand_right_palm_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_2" name="collision_hand_right_palm_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_20" name="collision_hand_right_palm_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_21" name="collision_hand_right_palm_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_22" name="collision_hand_right_palm_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_23" name="collision_hand_right_palm_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_24" name="collision_hand_right_palm_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_25" name="collision_hand_right_palm_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_26" name="collision_hand_right_palm_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_27" name="collision_hand_right_palm_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_28" name="collision_hand_right_palm_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_29" name="collision_hand_right_palm_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_3" name="collision_hand_right_palm_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_30" name="collision_hand_right_palm_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_31" name="collision_hand_right_palm_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_4" name="collision_hand_right_palm_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_5" name="collision_hand_right_palm_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_6" name="collision_hand_right_palm_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_7" name="collision_hand_right_palm_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_8" name="collision_hand_right_palm_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_palm_0" geom2="right_object_9" name="collision_hand_right_palm_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_index_2" name="collision_hand_right_thumb_2_collision_hand_right_index_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_index_1" name="collision_hand_right_thumb_2_collision_hand_right_index_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_index_0" name="collision_hand_right_thumb_2_collision_hand_right_index_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_middle_2" name="collision_hand_right_thumb_2_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_middle_1" name="collision_hand_right_thumb_2_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_middle_0" name="collision_hand_right_thumb_2_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_ring_2" name="collision_hand_right_thumb_2_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_ring_1" name="collision_hand_right_thumb_2_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_ring_0" name="collision_hand_right_thumb_2_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_pinky_2" name="collision_hand_right_thumb_2_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_pinky_1" name="collision_hand_right_thumb_2_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="collision_hand_right_pinky_0" name="collision_hand_right_thumb_2_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_0" name="collision_hand_right_thumb_2_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_1" name="collision_hand_right_thumb_2_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_10" name="collision_hand_right_thumb_2_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_11" name="collision_hand_right_thumb_2_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_12" name="collision_hand_right_thumb_2_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_13" name="collision_hand_right_thumb_2_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_14" name="collision_hand_right_thumb_2_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_15" name="collision_hand_right_thumb_2_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_16" name="collision_hand_right_thumb_2_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_17" name="collision_hand_right_thumb_2_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_18" name="collision_hand_right_thumb_2_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_19" name="collision_hand_right_thumb_2_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_2" name="collision_hand_right_thumb_2_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_20" name="collision_hand_right_thumb_2_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_21" name="collision_hand_right_thumb_2_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_22" name="collision_hand_right_thumb_2_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_23" name="collision_hand_right_thumb_2_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_24" name="collision_hand_right_thumb_2_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_25" name="collision_hand_right_thumb_2_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_26" name="collision_hand_right_thumb_2_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_27" name="collision_hand_right_thumb_2_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_28" name="collision_hand_right_thumb_2_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_29" name="collision_hand_right_thumb_2_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_3" name="collision_hand_right_thumb_2_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_30" name="collision_hand_right_thumb_2_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_31" name="collision_hand_right_thumb_2_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_4" name="collision_hand_right_thumb_2_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_5" name="collision_hand_right_thumb_2_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_6" name="collision_hand_right_thumb_2_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_7" name="collision_hand_right_thumb_2_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_8" name="collision_hand_right_thumb_2_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_2" geom2="right_object_9" name="collision_hand_right_thumb_2_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_index_2" name="collision_hand_right_thumb_1_collision_hand_right_index_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_index_1" name="collision_hand_right_thumb_1_collision_hand_right_index_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_index_0" name="collision_hand_right_thumb_1_collision_hand_right_index_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_middle_2" name="collision_hand_right_thumb_1_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_middle_1" name="collision_hand_right_thumb_1_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_middle_0" name="collision_hand_right_thumb_1_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_ring_2" name="collision_hand_right_thumb_1_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_ring_1" name="collision_hand_right_thumb_1_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_ring_0" name="collision_hand_right_thumb_1_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_pinky_2" name="collision_hand_right_thumb_1_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_pinky_1" name="collision_hand_right_thumb_1_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="collision_hand_right_pinky_0" name="collision_hand_right_thumb_1_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_0" name="collision_hand_right_thumb_1_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_1" name="collision_hand_right_thumb_1_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_10" name="collision_hand_right_thumb_1_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_11" name="collision_hand_right_thumb_1_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_12" name="collision_hand_right_thumb_1_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_13" name="collision_hand_right_thumb_1_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_14" name="collision_hand_right_thumb_1_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_15" name="collision_hand_right_thumb_1_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_16" name="collision_hand_right_thumb_1_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_17" name="collision_hand_right_thumb_1_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_18" name="collision_hand_right_thumb_1_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_19" name="collision_hand_right_thumb_1_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_2" name="collision_hand_right_thumb_1_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_20" name="collision_hand_right_thumb_1_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_21" name="collision_hand_right_thumb_1_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_22" name="collision_hand_right_thumb_1_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_23" name="collision_hand_right_thumb_1_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_24" name="collision_hand_right_thumb_1_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_25" name="collision_hand_right_thumb_1_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_26" name="collision_hand_right_thumb_1_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_27" name="collision_hand_right_thumb_1_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_28" name="collision_hand_right_thumb_1_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_29" name="collision_hand_right_thumb_1_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_3" name="collision_hand_right_thumb_1_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_30" name="collision_hand_right_thumb_1_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_31" name="collision_hand_right_thumb_1_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_4" name="collision_hand_right_thumb_1_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_5" name="collision_hand_right_thumb_1_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_6" name="collision_hand_right_thumb_1_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_7" name="collision_hand_right_thumb_1_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_8" name="collision_hand_right_thumb_1_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_1" geom2="right_object_9" name="collision_hand_right_thumb_1_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_index_2" name="collision_hand_right_thumb_0_collision_hand_right_index_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_index_1" name="collision_hand_right_thumb_0_collision_hand_right_index_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_index_0" name="collision_hand_right_thumb_0_collision_hand_right_index_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_middle_2" name="collision_hand_right_thumb_0_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_middle_1" name="collision_hand_right_thumb_0_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_middle_0" name="collision_hand_right_thumb_0_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_ring_2" name="collision_hand_right_thumb_0_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_ring_1" name="collision_hand_right_thumb_0_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_ring_0" name="collision_hand_right_thumb_0_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_pinky_2" name="collision_hand_right_thumb_0_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_pinky_1" name="collision_hand_right_thumb_0_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="collision_hand_right_pinky_0" name="collision_hand_right_thumb_0_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_0" name="collision_hand_right_thumb_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_1" name="collision_hand_right_thumb_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_10" name="collision_hand_right_thumb_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_11" name="collision_hand_right_thumb_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_12" name="collision_hand_right_thumb_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_13" name="collision_hand_right_thumb_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_14" name="collision_hand_right_thumb_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_15" name="collision_hand_right_thumb_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_16" name="collision_hand_right_thumb_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_17" name="collision_hand_right_thumb_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_18" name="collision_hand_right_thumb_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_19" name="collision_hand_right_thumb_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_2" name="collision_hand_right_thumb_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_20" name="collision_hand_right_thumb_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_21" name="collision_hand_right_thumb_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_22" name="collision_hand_right_thumb_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_23" name="collision_hand_right_thumb_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_24" name="collision_hand_right_thumb_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_25" name="collision_hand_right_thumb_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_26" name="collision_hand_right_thumb_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_27" name="collision_hand_right_thumb_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_28" name="collision_hand_right_thumb_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_29" name="collision_hand_right_thumb_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_3" name="collision_hand_right_thumb_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_30" name="collision_hand_right_thumb_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_31" name="collision_hand_right_thumb_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_4" name="collision_hand_right_thumb_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_5" name="collision_hand_right_thumb_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_6" name="collision_hand_right_thumb_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_7" name="collision_hand_right_thumb_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_8" name="collision_hand_right_thumb_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_thumb_0" geom2="right_object_9" name="collision_hand_right_thumb_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_middle_2" name="collision_hand_right_index_2_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_middle_1" name="collision_hand_right_index_2_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_middle_0" name="collision_hand_right_index_2_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_ring_2" name="collision_hand_right_index_2_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_ring_1" name="collision_hand_right_index_2_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_ring_0" name="collision_hand_right_index_2_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_pinky_2" name="collision_hand_right_index_2_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_pinky_1" name="collision_hand_right_index_2_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="collision_hand_right_pinky_0" name="collision_hand_right_index_2_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_0" name="collision_hand_right_index_2_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_1" name="collision_hand_right_index_2_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_10" name="collision_hand_right_index_2_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_11" name="collision_hand_right_index_2_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_12" name="collision_hand_right_index_2_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_13" name="collision_hand_right_index_2_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_14" name="collision_hand_right_index_2_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_15" name="collision_hand_right_index_2_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_16" name="collision_hand_right_index_2_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_17" name="collision_hand_right_index_2_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_18" name="collision_hand_right_index_2_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_19" name="collision_hand_right_index_2_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_2" name="collision_hand_right_index_2_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_20" name="collision_hand_right_index_2_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_21" name="collision_hand_right_index_2_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_22" name="collision_hand_right_index_2_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_23" name="collision_hand_right_index_2_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_24" name="collision_hand_right_index_2_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_25" name="collision_hand_right_index_2_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_26" name="collision_hand_right_index_2_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_27" name="collision_hand_right_index_2_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_28" name="collision_hand_right_index_2_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_29" name="collision_hand_right_index_2_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_3" name="collision_hand_right_index_2_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_30" name="collision_hand_right_index_2_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_31" name="collision_hand_right_index_2_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_4" name="collision_hand_right_index_2_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_5" name="collision_hand_right_index_2_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_6" name="collision_hand_right_index_2_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_7" name="collision_hand_right_index_2_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_8" name="collision_hand_right_index_2_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_2" geom2="right_object_9" name="collision_hand_right_index_2_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_middle_2" name="collision_hand_right_index_1_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_middle_1" name="collision_hand_right_index_1_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_middle_0" name="collision_hand_right_index_1_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_ring_2" name="collision_hand_right_index_1_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_ring_1" name="collision_hand_right_index_1_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_ring_0" name="collision_hand_right_index_1_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_pinky_2" name="collision_hand_right_index_1_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_pinky_1" name="collision_hand_right_index_1_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="collision_hand_right_pinky_0" name="collision_hand_right_index_1_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_0" name="collision_hand_right_index_1_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_1" name="collision_hand_right_index_1_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_10" name="collision_hand_right_index_1_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_11" name="collision_hand_right_index_1_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_12" name="collision_hand_right_index_1_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_13" name="collision_hand_right_index_1_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_14" name="collision_hand_right_index_1_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_15" name="collision_hand_right_index_1_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_16" name="collision_hand_right_index_1_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_17" name="collision_hand_right_index_1_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_18" name="collision_hand_right_index_1_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_19" name="collision_hand_right_index_1_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_2" name="collision_hand_right_index_1_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_20" name="collision_hand_right_index_1_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_21" name="collision_hand_right_index_1_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_22" name="collision_hand_right_index_1_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_23" name="collision_hand_right_index_1_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_24" name="collision_hand_right_index_1_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_25" name="collision_hand_right_index_1_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_26" name="collision_hand_right_index_1_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_27" name="collision_hand_right_index_1_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_28" name="collision_hand_right_index_1_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_29" name="collision_hand_right_index_1_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_3" name="collision_hand_right_index_1_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_30" name="collision_hand_right_index_1_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_31" name="collision_hand_right_index_1_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_4" name="collision_hand_right_index_1_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_5" name="collision_hand_right_index_1_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_6" name="collision_hand_right_index_1_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_7" name="collision_hand_right_index_1_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_8" name="collision_hand_right_index_1_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_1" geom2="right_object_9" name="collision_hand_right_index_1_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_middle_2" name="collision_hand_right_index_0_collision_hand_right_middle_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_middle_1" name="collision_hand_right_index_0_collision_hand_right_middle_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_middle_0" name="collision_hand_right_index_0_collision_hand_right_middle_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_ring_2" name="collision_hand_right_index_0_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_ring_1" name="collision_hand_right_index_0_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_ring_0" name="collision_hand_right_index_0_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_pinky_2" name="collision_hand_right_index_0_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_pinky_1" name="collision_hand_right_index_0_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="collision_hand_right_pinky_0" name="collision_hand_right_index_0_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_0" name="collision_hand_right_index_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_1" name="collision_hand_right_index_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_10" name="collision_hand_right_index_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_11" name="collision_hand_right_index_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_12" name="collision_hand_right_index_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_13" name="collision_hand_right_index_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_14" name="collision_hand_right_index_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_15" name="collision_hand_right_index_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_16" name="collision_hand_right_index_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_17" name="collision_hand_right_index_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_18" name="collision_hand_right_index_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_19" name="collision_hand_right_index_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_2" name="collision_hand_right_index_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_20" name="collision_hand_right_index_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_21" name="collision_hand_right_index_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_22" name="collision_hand_right_index_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_23" name="collision_hand_right_index_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_24" name="collision_hand_right_index_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_25" name="collision_hand_right_index_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_26" name="collision_hand_right_index_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_27" name="collision_hand_right_index_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_28" name="collision_hand_right_index_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_29" name="collision_hand_right_index_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_3" name="collision_hand_right_index_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_30" name="collision_hand_right_index_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_31" name="collision_hand_right_index_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_4" name="collision_hand_right_index_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_5" name="collision_hand_right_index_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_6" name="collision_hand_right_index_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_7" name="collision_hand_right_index_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_8" name="collision_hand_right_index_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_index_0" geom2="right_object_9" name="collision_hand_right_index_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_ring_2" name="collision_hand_right_middle_2_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_ring_1" name="collision_hand_right_middle_2_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_ring_0" name="collision_hand_right_middle_2_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_pinky_2" name="collision_hand_right_middle_2_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_pinky_1" name="collision_hand_right_middle_2_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="collision_hand_right_pinky_0" name="collision_hand_right_middle_2_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_0" name="collision_hand_right_middle_2_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_1" name="collision_hand_right_middle_2_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_10" name="collision_hand_right_middle_2_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_11" name="collision_hand_right_middle_2_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_12" name="collision_hand_right_middle_2_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_13" name="collision_hand_right_middle_2_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_14" name="collision_hand_right_middle_2_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_15" name="collision_hand_right_middle_2_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_16" name="collision_hand_right_middle_2_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_17" name="collision_hand_right_middle_2_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_18" name="collision_hand_right_middle_2_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_19" name="collision_hand_right_middle_2_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_2" name="collision_hand_right_middle_2_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_20" name="collision_hand_right_middle_2_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_21" name="collision_hand_right_middle_2_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_22" name="collision_hand_right_middle_2_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_23" name="collision_hand_right_middle_2_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_24" name="collision_hand_right_middle_2_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_25" name="collision_hand_right_middle_2_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_26" name="collision_hand_right_middle_2_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_27" name="collision_hand_right_middle_2_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_28" name="collision_hand_right_middle_2_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_29" name="collision_hand_right_middle_2_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_3" name="collision_hand_right_middle_2_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_30" name="collision_hand_right_middle_2_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_31" name="collision_hand_right_middle_2_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_4" name="collision_hand_right_middle_2_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_5" name="collision_hand_right_middle_2_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_6" name="collision_hand_right_middle_2_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_7" name="collision_hand_right_middle_2_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_8" name="collision_hand_right_middle_2_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_2" geom2="right_object_9" name="collision_hand_right_middle_2_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_ring_2" name="collision_hand_right_middle_1_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_ring_1" name="collision_hand_right_middle_1_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_ring_0" name="collision_hand_right_middle_1_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_pinky_2" name="collision_hand_right_middle_1_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_pinky_1" name="collision_hand_right_middle_1_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="collision_hand_right_pinky_0" name="collision_hand_right_middle_1_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_0" name="collision_hand_right_middle_1_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_1" name="collision_hand_right_middle_1_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_10" name="collision_hand_right_middle_1_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_11" name="collision_hand_right_middle_1_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_12" name="collision_hand_right_middle_1_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_13" name="collision_hand_right_middle_1_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_14" name="collision_hand_right_middle_1_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_15" name="collision_hand_right_middle_1_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_16" name="collision_hand_right_middle_1_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_17" name="collision_hand_right_middle_1_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_18" name="collision_hand_right_middle_1_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_19" name="collision_hand_right_middle_1_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_2" name="collision_hand_right_middle_1_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_20" name="collision_hand_right_middle_1_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_21" name="collision_hand_right_middle_1_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_22" name="collision_hand_right_middle_1_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_23" name="collision_hand_right_middle_1_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_24" name="collision_hand_right_middle_1_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_25" name="collision_hand_right_middle_1_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_26" name="collision_hand_right_middle_1_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_27" name="collision_hand_right_middle_1_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_28" name="collision_hand_right_middle_1_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_29" name="collision_hand_right_middle_1_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_3" name="collision_hand_right_middle_1_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_30" name="collision_hand_right_middle_1_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_31" name="collision_hand_right_middle_1_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_4" name="collision_hand_right_middle_1_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_5" name="collision_hand_right_middle_1_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_6" name="collision_hand_right_middle_1_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_7" name="collision_hand_right_middle_1_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_8" name="collision_hand_right_middle_1_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_1" geom2="right_object_9" name="collision_hand_right_middle_1_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_ring_2" name="collision_hand_right_middle_0_collision_hand_right_ring_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_ring_1" name="collision_hand_right_middle_0_collision_hand_right_ring_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_ring_0" name="collision_hand_right_middle_0_collision_hand_right_ring_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_pinky_2" name="collision_hand_right_middle_0_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_pinky_1" name="collision_hand_right_middle_0_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="collision_hand_right_pinky_0" name="collision_hand_right_middle_0_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_0" name="collision_hand_right_middle_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_1" name="collision_hand_right_middle_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_10" name="collision_hand_right_middle_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_11" name="collision_hand_right_middle_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_12" name="collision_hand_right_middle_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_13" name="collision_hand_right_middle_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_14" name="collision_hand_right_middle_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_15" name="collision_hand_right_middle_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_16" name="collision_hand_right_middle_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_17" name="collision_hand_right_middle_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_18" name="collision_hand_right_middle_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_19" name="collision_hand_right_middle_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_2" name="collision_hand_right_middle_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_20" name="collision_hand_right_middle_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_21" name="collision_hand_right_middle_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_22" name="collision_hand_right_middle_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_23" name="collision_hand_right_middle_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_24" name="collision_hand_right_middle_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_25" name="collision_hand_right_middle_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_26" name="collision_hand_right_middle_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_27" name="collision_hand_right_middle_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_28" name="collision_hand_right_middle_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_29" name="collision_hand_right_middle_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_3" name="collision_hand_right_middle_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_30" name="collision_hand_right_middle_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_31" name="collision_hand_right_middle_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_4" name="collision_hand_right_middle_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_5" name="collision_hand_right_middle_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_6" name="collision_hand_right_middle_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_7" name="collision_hand_right_middle_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_8" name="collision_hand_right_middle_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_middle_0" geom2="right_object_9" name="collision_hand_right_middle_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="collision_hand_right_pinky_2" name="collision_hand_right_ring_2_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="collision_hand_right_pinky_1" name="collision_hand_right_ring_2_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="collision_hand_right_pinky_0" name="collision_hand_right_ring_2_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_0" name="collision_hand_right_ring_2_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_1" name="collision_hand_right_ring_2_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_10" name="collision_hand_right_ring_2_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_11" name="collision_hand_right_ring_2_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_12" name="collision_hand_right_ring_2_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_13" name="collision_hand_right_ring_2_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_14" name="collision_hand_right_ring_2_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_15" name="collision_hand_right_ring_2_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_16" name="collision_hand_right_ring_2_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_17" name="collision_hand_right_ring_2_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_18" name="collision_hand_right_ring_2_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_19" name="collision_hand_right_ring_2_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_2" name="collision_hand_right_ring_2_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_20" name="collision_hand_right_ring_2_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_21" name="collision_hand_right_ring_2_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_22" name="collision_hand_right_ring_2_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_23" name="collision_hand_right_ring_2_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_24" name="collision_hand_right_ring_2_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_25" name="collision_hand_right_ring_2_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_26" name="collision_hand_right_ring_2_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_27" name="collision_hand_right_ring_2_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_28" name="collision_hand_right_ring_2_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_29" name="collision_hand_right_ring_2_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_3" name="collision_hand_right_ring_2_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_30" name="collision_hand_right_ring_2_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_31" name="collision_hand_right_ring_2_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_4" name="collision_hand_right_ring_2_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_5" name="collision_hand_right_ring_2_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_6" name="collision_hand_right_ring_2_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_7" name="collision_hand_right_ring_2_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_8" name="collision_hand_right_ring_2_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_2" geom2="right_object_9" name="collision_hand_right_ring_2_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="collision_hand_right_pinky_2" name="collision_hand_right_ring_1_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="collision_hand_right_pinky_1" name="collision_hand_right_ring_1_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="collision_hand_right_pinky_0" name="collision_hand_right_ring_1_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_0" name="collision_hand_right_ring_1_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_1" name="collision_hand_right_ring_1_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_10" name="collision_hand_right_ring_1_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_11" name="collision_hand_right_ring_1_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_12" name="collision_hand_right_ring_1_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_13" name="collision_hand_right_ring_1_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_14" name="collision_hand_right_ring_1_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_15" name="collision_hand_right_ring_1_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_16" name="collision_hand_right_ring_1_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_17" name="collision_hand_right_ring_1_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_18" name="collision_hand_right_ring_1_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_19" name="collision_hand_right_ring_1_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_2" name="collision_hand_right_ring_1_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_20" name="collision_hand_right_ring_1_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_21" name="collision_hand_right_ring_1_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_22" name="collision_hand_right_ring_1_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_23" name="collision_hand_right_ring_1_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_24" name="collision_hand_right_ring_1_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_25" name="collision_hand_right_ring_1_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_26" name="collision_hand_right_ring_1_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_27" name="collision_hand_right_ring_1_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_28" name="collision_hand_right_ring_1_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_29" name="collision_hand_right_ring_1_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_3" name="collision_hand_right_ring_1_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_30" name="collision_hand_right_ring_1_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_31" name="collision_hand_right_ring_1_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_4" name="collision_hand_right_ring_1_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_5" name="collision_hand_right_ring_1_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_6" name="collision_hand_right_ring_1_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_7" name="collision_hand_right_ring_1_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_8" name="collision_hand_right_ring_1_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_1" geom2="right_object_9" name="collision_hand_right_ring_1_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="collision_hand_right_pinky_2" name="collision_hand_right_ring_0_collision_hand_right_pinky_2" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="collision_hand_right_pinky_1" name="collision_hand_right_ring_0_collision_hand_right_pinky_1" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="collision_hand_right_pinky_0" name="collision_hand_right_ring_0_collision_hand_right_pinky_0" solref="0.01" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_0" name="collision_hand_right_ring_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_1" name="collision_hand_right_ring_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_10" name="collision_hand_right_ring_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_11" name="collision_hand_right_ring_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_12" name="collision_hand_right_ring_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_13" name="collision_hand_right_ring_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_14" name="collision_hand_right_ring_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_15" name="collision_hand_right_ring_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_16" name="collision_hand_right_ring_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_17" name="collision_hand_right_ring_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_18" name="collision_hand_right_ring_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_19" name="collision_hand_right_ring_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_2" name="collision_hand_right_ring_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_20" name="collision_hand_right_ring_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_21" name="collision_hand_right_ring_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_22" name="collision_hand_right_ring_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_23" name="collision_hand_right_ring_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_24" name="collision_hand_right_ring_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_25" name="collision_hand_right_ring_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_26" name="collision_hand_right_ring_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_27" name="collision_hand_right_ring_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_28" name="collision_hand_right_ring_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_29" name="collision_hand_right_ring_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_3" name="collision_hand_right_ring_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_30" name="collision_hand_right_ring_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_31" name="collision_hand_right_ring_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_4" name="collision_hand_right_ring_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_5" name="collision_hand_right_ring_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_6" name="collision_hand_right_ring_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_7" name="collision_hand_right_ring_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_8" name="collision_hand_right_ring_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_ring_0" geom2="right_object_9" name="collision_hand_right_ring_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_0" name="collision_hand_right_pinky_2_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_1" name="collision_hand_right_pinky_2_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_10" name="collision_hand_right_pinky_2_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_11" name="collision_hand_right_pinky_2_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_12" name="collision_hand_right_pinky_2_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_13" name="collision_hand_right_pinky_2_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_14" name="collision_hand_right_pinky_2_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_15" name="collision_hand_right_pinky_2_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_16" name="collision_hand_right_pinky_2_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_17" name="collision_hand_right_pinky_2_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_18" name="collision_hand_right_pinky_2_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_19" name="collision_hand_right_pinky_2_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_2" name="collision_hand_right_pinky_2_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_20" name="collision_hand_right_pinky_2_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_21" name="collision_hand_right_pinky_2_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_22" name="collision_hand_right_pinky_2_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_23" name="collision_hand_right_pinky_2_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_24" name="collision_hand_right_pinky_2_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_25" name="collision_hand_right_pinky_2_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_26" name="collision_hand_right_pinky_2_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_27" name="collision_hand_right_pinky_2_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_28" name="collision_hand_right_pinky_2_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_29" name="collision_hand_right_pinky_2_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_3" name="collision_hand_right_pinky_2_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_30" name="collision_hand_right_pinky_2_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_31" name="collision_hand_right_pinky_2_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_4" name="collision_hand_right_pinky_2_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_5" name="collision_hand_right_pinky_2_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_6" name="collision_hand_right_pinky_2_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_7" name="collision_hand_right_pinky_2_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_8" name="collision_hand_right_pinky_2_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_2" geom2="right_object_9" name="collision_hand_right_pinky_2_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_0" name="collision_hand_right_pinky_1_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_1" name="collision_hand_right_pinky_1_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_10" name="collision_hand_right_pinky_1_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_11" name="collision_hand_right_pinky_1_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_12" name="collision_hand_right_pinky_1_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_13" name="collision_hand_right_pinky_1_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_14" name="collision_hand_right_pinky_1_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_15" name="collision_hand_right_pinky_1_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_16" name="collision_hand_right_pinky_1_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_17" name="collision_hand_right_pinky_1_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_18" name="collision_hand_right_pinky_1_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_19" name="collision_hand_right_pinky_1_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_2" name="collision_hand_right_pinky_1_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_20" name="collision_hand_right_pinky_1_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_21" name="collision_hand_right_pinky_1_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_22" name="collision_hand_right_pinky_1_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_23" name="collision_hand_right_pinky_1_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_24" name="collision_hand_right_pinky_1_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_25" name="collision_hand_right_pinky_1_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_26" name="collision_hand_right_pinky_1_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_27" name="collision_hand_right_pinky_1_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_28" name="collision_hand_right_pinky_1_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_29" name="collision_hand_right_pinky_1_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_3" name="collision_hand_right_pinky_1_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_30" name="collision_hand_right_pinky_1_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_31" name="collision_hand_right_pinky_1_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_4" name="collision_hand_right_pinky_1_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_5" name="collision_hand_right_pinky_1_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_6" name="collision_hand_right_pinky_1_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_7" name="collision_hand_right_pinky_1_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_8" name="collision_hand_right_pinky_1_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_1" geom2="right_object_9" name="collision_hand_right_pinky_1_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_0" name="collision_hand_right_pinky_0_right_object_0" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_1" name="collision_hand_right_pinky_0_right_object_1" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_10" name="collision_hand_right_pinky_0_right_object_10" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_11" name="collision_hand_right_pinky_0_right_object_11" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_12" name="collision_hand_right_pinky_0_right_object_12" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_13" name="collision_hand_right_pinky_0_right_object_13" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_14" name="collision_hand_right_pinky_0_right_object_14" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_15" name="collision_hand_right_pinky_0_right_object_15" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_16" name="collision_hand_right_pinky_0_right_object_16" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_17" name="collision_hand_right_pinky_0_right_object_17" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_18" name="collision_hand_right_pinky_0_right_object_18" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_19" name="collision_hand_right_pinky_0_right_object_19" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_2" name="collision_hand_right_pinky_0_right_object_2" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_20" name="collision_hand_right_pinky_0_right_object_20" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_21" name="collision_hand_right_pinky_0_right_object_21" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_22" name="collision_hand_right_pinky_0_right_object_22" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_23" name="collision_hand_right_pinky_0_right_object_23" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_24" name="collision_hand_right_pinky_0_right_object_24" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_25" name="collision_hand_right_pinky_0_right_object_25" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_26" name="collision_hand_right_pinky_0_right_object_26" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_27" name="collision_hand_right_pinky_0_right_object_27" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_28" name="collision_hand_right_pinky_0_right_object_28" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_29" name="collision_hand_right_pinky_0_right_object_29" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_3" name="collision_hand_right_pinky_0_right_object_3" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_30" name="collision_hand_right_pinky_0_right_object_30" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_31" name="collision_hand_right_pinky_0_right_object_31" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_4" name="collision_hand_right_pinky_0_right_object_4" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_5" name="collision_hand_right_pinky_0_right_object_5" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_6" name="collision_hand_right_pinky_0_right_object_6" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_7" name="collision_hand_right_pinky_0_right_object_7" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_8" name="collision_hand_right_pinky_0_right_object_8" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+    <pair geom1="collision_hand_right_pinky_0" geom2="right_object_9" name="collision_hand_right_pinky_0_right_object_9" condim="6" solref="0.01" solimp="0.998 0.998" friction="1.5 1.5 0.15 0 0"/>
+  </contact>
+
+  <equality>
+    <weld name="right_object_weld" body1="right_object" anchor="0 1 0" relpose="0 0 0 0 0 0 0" torquescale="1" active="false" solref="0.01" solimp="0.9995 0.9995"/>
+  </equality>
+
+  <actuator>
+    <general name="right_pos_x_position" joint="right_pos_x" ctrlrange="-5 5" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_pos_y_position" joint="right_pos_y" ctrlrange="-5 5" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_pos_z_position" joint="right_pos_z" ctrlrange="-5 5" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_rot_x_position" joint="right_rot_x" ctrlrange="-6.28 6.28" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_rot_y_position" joint="right_rot_y" ctrlrange="-6.28 6.28" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_rot_z_position" joint="right_rot_z" ctrlrange="-6.28 6.28" gainprm="1000" biasprm="0 -1000"/>
+    <general name="right_thumb_CMC_FE_position" joint="right_thumb_CMC_FE" ctrlrange="-0.1745 1.9199"/>
+    <general name="right_thumb_CMC_AA_position" joint="right_thumb_CMC_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_thumb_MCP_FE_position" joint="right_thumb_MCP_FE" ctrlrange="-0.5236 1.3963"/>
+    <general name="right_thumb_MCP_AA_position" joint="right_thumb_MCP_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_thumb_IP_position" joint="right_thumb_IP" ctrlrange="0 1.7453"/>
+    <general name="right_index_MCP_FE_position" joint="right_index_MCP_FE" ctrlrange="-0.174533 1.5708"/>
+    <general name="right_index_MCP_AA_position" joint="right_index_MCP_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_index_PIP_position" joint="right_index_PIP" ctrlrange="0 1.7453"/>
+    <general name="right_index_DIP_position" joint="right_index_DIP" ctrlrange="0 1.3963"/>
+    <general name="right_middle_MCP_FE_position" joint="right_middle_MCP_FE" ctrlrange="-0.174533 1.5708"/>
+    <general name="right_middle_MCP_AA_position" joint="right_middle_MCP_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_middle_PIP_position" joint="right_middle_PIP" ctrlrange="0 1.7453"/>
+    <general name="right_middle_DIP_position" joint="right_middle_DIP" ctrlrange="0 1.3963"/>
+    <general name="right_ring_MCP_FE_position" joint="right_ring_MCP_FE" ctrlrange="-0.174533 1.5708"/>
+    <general name="right_ring_MCP_AA_position" joint="right_ring_MCP_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_ring_PIP_position" joint="right_ring_PIP" ctrlrange="0 1.7453"/>
+    <general name="right_ring_DIP_position" joint="right_ring_DIP" ctrlrange="0 1.3963"/>
+    <general name="right_pinky_CMC_position" joint="right_pinky_CMC" ctrlrange="0 0.2618"/>
+    <general name="right_pinky_MCP_FE_position" joint="right_pinky_MCP_FE" ctrlrange="-0.174533 1.5708"/>
+    <general name="right_pinky_MCP_AA_position" joint="right_pinky_MCP_AA" ctrlrange="-0.3491 0.3491"/>
+    <general name="right_pinky_PIP_position" joint="right_pinky_PIP" ctrlrange="0 1.7453"/>
+    <general name="right_pinky_DIP_position" joint="right_pinky_DIP" ctrlrange="0 1.3963"/>
+  </actuator>
+</mujoco>
