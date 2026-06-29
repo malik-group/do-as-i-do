@@ -1,0 +1,8 @@
+{
+    "roll_deg": 0.0,
+    "pitch_deg": 0.0,
+    "vec3d": [0.0, -1.0, 0.0],
+    "n_frames": 138,
+    "n_inliers": 130,
+    "per_frame": []
+}
