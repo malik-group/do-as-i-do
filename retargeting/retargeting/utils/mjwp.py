@@ -24,11 +24,12 @@ from retargeting.utils.interp import align_to_sim_dt
 from retargeting.utils.io import get_processed_data_dir
 from retargeting.utils.math import quat_sub
 
-# Initialize Warp once per process
+# Initialize Warp once per process. warp>=1.13 no longer requires an explicit
+# wp.init() (it initializes lazily) and can raise or be absent entirely, so
+# tolerate every failure mode rather than only "already initialized".
 try:
     wp.init()
-except RuntimeError:
-    # Already initialized
+except Exception:
     pass
 
 
@@ -39,7 +40,8 @@ class MJWPEnv:
     model_wp: mjwarp.Model
     data_wp: mjwarp.Data
     data_wp_prev: mjwarp.Data
-    graph: wp.ScopedCapture.Graph
+    # None when graph capture is unavailable (HIP/ROCm) — step_env runs eager.
+    graph: "wp.ScopedCapture.Graph | None"
     # Device alias used for Warp allocations/launches (e.g., "cuda:1" or "cpu")
     device: str
     num_worlds: int
@@ -88,8 +90,15 @@ class MJWPEnv:
 
 def _compile_step(
     model_wp: mjwarp.Model, data_wp: mjwarp.Data
-) -> wp.ScopedCapture.Graph:
-    """Warm up and capture a CUDA graph that runs a single mjwarp.step."""
+) -> "wp.ScopedCapture.Graph | None":
+    """Warm up and (if supported) capture a CUDA graph running one mjwarp.step.
+
+    Returns the captured graph on CUDA, or ``None`` when graph capture is
+    unavailable (HIP/ROCm GPUs do not implement CUDA-graph capture). A ``None``
+    graph signals ``step_env`` to fall back to an eager ``mjwarp.step`` — same
+    physics, no graph replay. The two warmup steps always run so kernel
+    modules are JIT-loaded before the first real step either way.
+    """
 
     def _step_once():
         mjwarp.step(model_wp, data_wp)
@@ -98,10 +107,18 @@ def _compile_step(
     _step_once()
     _step_once()
     wp.synchronize()
-    with wp.ScopedCapture() as capture:
-        _step_once()
-    wp.synchronize()
-    return capture.graph
+    try:
+        with wp.ScopedCapture() as capture:
+            _step_once()
+        wp.synchronize()
+        return capture.graph
+    except Exception as exc:
+        # HIP/ROCm (and any backend without graph capture) lands here; run eager.
+        loguru.logger.warning(
+            "CUDA-graph capture unavailable ({}); falling back to eager "
+            "mjwarp.step (expected on HIP/ROCm).", type(exc).__name__,
+        )
+        return None
 
 
 # --
@@ -1505,7 +1522,11 @@ def step_env(
         ):
             env = apply_perturbation(config, env, sim_step=sim_step)
         wp.copy(env.data_wp.ctrl, wp.from_torch(ctrl_mujoco.to(torch.float32)))
-        wp.capture_launch(env.graph)
+        if env.graph is not None:
+            wp.capture_launch(env.graph)
+        else:
+            # HIP/ROCm eager fallback: replay the same single step directly.
+            mjwarp.step(env.model_wp, env.data_wp)
 
 
 def save_env_params(config: Config, env: MJWPEnv):
