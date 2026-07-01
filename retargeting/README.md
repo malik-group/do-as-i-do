@@ -25,7 +25,8 @@ retargeting/
 
 ## Requirements
 
-- An NVIDIA GPU with CUDA (MuJoCo Warp runs the physics optimization on GPU).
+- An NVIDIA GPU with CUDA (MuJoCo Warp runs the physics optimization on GPU). AMD ROCm GPUs
+  (gfx942) are also supported — see [`env/rocm.md`](env/rocm.md).
 - A browser for the viser viewer (the default visualization; serves a web UI).
 - A reconstruction pipeline output directory as input (e.g. the whisking demo).
 

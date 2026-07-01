@@ -12,6 +12,8 @@ pip install -e .          # from the retargeting/ directory
 Notes:
 - `mujoco-warp` is pinned to a known-good commit in `pyproject.toml`; it pulls in a compatible
   `mujoco` and `warp-lang`. An NVIDIA GPU with CUDA is required for the physics-optimization stage.
+- **AMD / ROCm:** to run the physics stage on AMD GPUs (gfx942) instead, see [`rocm.md`](rocm.md)
+  and the one-shot [`setup_rocm.sh`](setup_rocm.sh).
 - The viser viewer (default) serves a web UI; open the printed URL in a browser.
 
 ## Exact pins
